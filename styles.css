@@ -55,3 +55,18 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
 }
+.social-links {
+    position: absolute;
+    bottom: 20px; /* Adjust as necessary */
+    left: 20px; /* Adjust as necessary */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    z-index: 1001; /* Ensure it's on top of the image */
+}
+
+.social-links a img {
+    width: 40px; /* Adjust size as necessary */
+    height: 40px; /* Adjust size as necessary */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Add some shadow for better visibility */
+}
+
