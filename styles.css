@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.bio {
+    text-align: center;
+}
+
+.social-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.resume-headshot, .comp-card-photos img, .gallery-category img, .media-item video {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+}
+
+.download-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.size-card {
+    text-align: center;
+    font-size: 16px;
+}
+
+.gallery-category {
+    margin-bottom: 20px;
+}
+
+.gallery-category img {
+    margin: 5px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.media-item {
+    margin-bottom: 20px;
+}
+
+#contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #007bff;
+    color: #fff;
+}
