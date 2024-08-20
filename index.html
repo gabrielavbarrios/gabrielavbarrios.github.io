@@ -3,92 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actor Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .profile-image {
-            text-align: center;
-        }
-        .profile-image img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        .bio, .resume, .social-media {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .bio h2, .resume h2, .social-media h2 {
-            margin-top: 0;
-        }
-        .resume a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .social-media a {
-            text-decoration: none;
-            color: #333;
-            margin-right: 15px;
-        }
-    </style>
+    <title>Your Name - Actor/Model</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Actor Name</h1>
-    </header>
+    <!-- HOME Section -->
+    <section id="home">
+        <img src="your-professional-photo.jpg" alt="Your Name" class="profile-photo">
+        <div class="bio">
+            <h1>Your Name</h1>
+            <p>Short bio about your acting and modeling career. Highlight your experience, key projects, and unique skills.</p>
+            <div class="social-links">
+                <a href="your-instagram-link">Instagram</a> | 
+                <a href="your-imdb-link">IMDB</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-        <section class="profile-image">
-            <img src="headshot.jpg" alt="Actor Headshot">
-        </section>
+    <!-- RESUME Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <img src="your-headshot.jpg" alt="Your Name Headshot" class="resume-headshot">
+        <a href="your-resume.pdf" download class="download-link">Download Resume</a>
+    </section>
 
-        <section class="bio">
-            <h2>Bio</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, nisi vel auctor euismod, lectus purus efficitur dui, a pharetra sapien metus ac ex. Mauris at lectus non nisi facilisis luctus.</p>
-        </section>
+    <!-- COMP CARD Section -->
+    <section id="comp-card">
+        <h2>Comp Card</h2>
+        <div class="comp-card-photos">
+            <img src="digital1.jpg" alt="Digital 1">
+            <img src="digital2.jpg" alt="Digital 2">
+            <img src="digital3.jpg" alt="Digital 3">
+            <img src="digital4.jpg" alt="Digital 4">
+        </div>
+        <div class="size-card">
+            <p>Height: 5'9"</p>
+            <p>Bust: 34"</p>
+            <p>Waist: 24"</p>
+            <p>Hips: 35"</p>
+            <p>Dress: 4</p>
+            <p>Shoe: 7.5</p>
+            <p>Hair: Brown</p>
+            <p>Eyes: Blue</p>
+        </div>
+        <a href="your-comp-card.pdf" download class="download-link">Download Comp Card</a>
+    </section>
 
-        <section class="resume">
-            <h2>Resume</h2>
-            <p>You can download my resume here:</p>
-            <a href="resume.pdf" download>Download Resume</a>
-        </section>
+    <!-- GALLERY Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-category">
+            <h3>Headshots</h3>
+            <img src="headshot1.jpg" alt="Headshot 1">
+            <img src="headshot2.jpg" alt="Headshot 2">
+        </div>
+        <div class="gallery-category">
+            <h3>Modeling</h3>
+            <img src="modeling1.jpg" alt="Modeling 1">
+            <img src="modeling2.jpg" alt="Modeling 2">
+        </div>
+        <div class="gallery-category">
+            <h3>Commercial</h3>
+            <img src="commercial1.jpg" alt="Commercial 1">
+            <img src="commercial2.jpg" alt="Commercial 2">
+        </div>
+        <div class="gallery-category">
+            <h3>Production Stills or BTS</h3>
+            <img src="bts1.jpg" alt="BTS 1">
+            <img src="bts2.jpg" alt="BTS 2">
+        </div>
+        <div class="gallery-category">
+            <h3>Digitals</h3>
+            <img src="digital1.jpg" alt="Digital 1">
+            <img src="digital2.jpg" alt="Digital 2">
+        </div>
+    </section>
 
-        <section class="social-media">
-            <h2>Follow Me</h2>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
-        </section>
-    </div>
+    <!-- MEDIA Section -->
+    <section id="media">
+        <h2>Media</h2>
+        <div class="media-item">
+            <h3>Acting Reel</h3>
+            <video controls>
+                <source src="acting-reel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="media-item">
+            <h3>Commercials</h3>
+            <video controls>
+                <source src="commercial.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- CONTACT Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Agency Name: Your Agency</p>
+        <p>Agency Email: agency@example.com</p>
+        <p>Your Email: your.email@example.com</p>
+    </section>
 </body>
 </html>
