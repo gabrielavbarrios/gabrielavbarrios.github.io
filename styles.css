@@ -12,6 +12,9 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
 }
 
 header h1 {
@@ -37,30 +40,14 @@ nav ul li a {
     font-weight: bold;
 }
 
-.content {
-    display: flex;
-    align-items: center;
-    padding: 40px;
-}
-
-.image-section {
-    flex: 1;
-}
-
-.image-section img {
+.image-fullscreen {
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
 
-.text-section {
-    flex: 2;
-    padding-left: 40px;
-}
-
-.text-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
+.image-fullscreen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
