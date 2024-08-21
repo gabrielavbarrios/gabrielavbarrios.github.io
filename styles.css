@@ -104,7 +104,6 @@ nav ul li a {
         height: auto;
         width: 100%;
     }
-}
 .resume-section {
     padding: 50px 20px;
     background-color: #fff;
@@ -121,14 +120,14 @@ nav ul li a {
 
 .image-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 20px 0;
 }
 
 .image-block {
     text-align: center;
-    margin-right: 5px; /* Add some space between the images */
+    margin: 0 10px;
 }
 
 .responsive-image {
