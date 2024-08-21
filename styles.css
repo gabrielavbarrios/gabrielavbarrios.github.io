@@ -120,16 +120,16 @@ nav ul li a {
     margin-bottom: 30px;
     text-align: center;
 }
-
 .image-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     margin: 20px 0;
 }
 
 .image-block {
     text-align: center;
+    margin-bottom: 20px; /* Add some space between the images and the buttons */
 }
 
 .responsive-image {
@@ -152,4 +152,3 @@ nav ul li a {
 .download-button:hover {
     background-color: #0056b3;
 }
-
