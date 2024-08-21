@@ -127,13 +127,13 @@ nav ul li a {
 
 .image-block {
     text-align: center;
-    margin: 0 5px; /* Reduce the margin between the images even further */
+    margin: 0 10px;
 }
 
 .responsive-image {
     max-width: 100%;
     height: auto;
-    width: 400px;
+    width: 300px; /* Reduced the image width to 300px */
 }
 
 .download-button {
