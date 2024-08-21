@@ -104,6 +104,7 @@ nav ul li a {
         height: auto;
         width: 100%;
     }
+}
 .resume-section {
     padding: 50px 20px;
     background-color: #fff;
@@ -120,27 +121,27 @@ nav ul li a {
 
 .image-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 20px 0;
 }
 
 .image-block {
     text-align: center;
-    margin: 0 10px;
+    margin-right: 20px; /* Add some space between the images */
 }
 
 .responsive-image {
     max-width: 100%;
     height: auto;
-    width: 300px; /* Reduced the image width to 300px */
+    width: 400px;
 }
 
 .download-button {
     display: block;
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #424242;
+    background-color: #007BFF;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -148,73 +149,5 @@ nav ul li a {
 }
 
 .download-button:hover {
-    background-color: #686868;
-}
-
-.gallery-section {
-    display: none;
-    margin: 100px auto; /* Add some top margin to account for header */
-    padding: 50px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-}
-
-.gallery-section h2 {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 2em;
-    color: #333;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    filter: brightness(110%);
-}
-
-/* Full-Screen Image Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.overlay img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.overlay:target {
-    display: flex;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
+    background-color: #0056b3;
 }
