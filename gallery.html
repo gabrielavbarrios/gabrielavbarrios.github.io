@@ -41,6 +41,7 @@
             border-radius: 5px;
             background-color: #282a36;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
 
         .categories a:hover {
@@ -49,6 +50,7 @@
         }
 
         .gallery-section {
+            display: none;
             margin: 20px 0;
         }
 
@@ -114,11 +116,11 @@
 <body>
     <h1>Image Gallery</h1>
     <div class="categories">
-        <a href="#headshots">Headshots</a>
-        <a href="#digitals">Digitals</a>
-        <a href="#modeling-portfolio">Modeling Portfolio</a>
-        <a href="#commercial-photos">Commercial Photos</a>
-        <a href="#bts">Production Stills/BTS</a>
+        <a onclick="showSection('headshots')">Headshots</a>
+        <a onclick="showSection('digitals')">Digitals</a>
+        <a onclick="showSection('modeling-portfolio')">Modeling Portfolio</a>
+        <a onclick="showSection('commercial-photos')">Commercial Photos</a>
+        <a onclick="showSection('bts')">Production Stills/BTS</a>
     </div>
 
     <!-- Headshots Section -->
@@ -189,6 +191,24 @@
 
     <!-- Repeat for all images (create an overlay for each image) -->
 
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.gallery-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        // Show the first section by default on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('headshots');
+        });
+    </script>
 </body>
 
 </html>
