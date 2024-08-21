@@ -121,7 +121,35 @@ nav ul li a {
     text-align: center;
 }
 
-.pdf-viewer {
-    height: 800px; /* Set a fixed height for the PDF viewer */
-    overflow-y: scroll; /* Add vertical scrolling for the PDF viewer */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
 }
+
+.image-block {
+    text-align: center;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    width: 400px; /* Adjust the width as necessary */
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
