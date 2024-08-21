@@ -9,75 +9,95 @@
 </head>
 
 <body>
+    <!-- Main Website Navbar -->
     <header>
-        <h1>Image Gallery</h1>
+        <h1>GABRIELA BARRIOS</h1>
         <nav>
             <ul>
-                <li><a onclick="showSection('headshots')">Headshots</a></li>
-                <li><a onclick="showSection('digitals')">Digitals</a></li>
-                <li><a onclick="showSection('modeling-portfolio')">Modeling Portfolio</a></li>
-                <li><a onclick="showSection('commercial-photos')">Commercial Photos</a></li>
-                <li><a onclick="showSection('bts')">Production Stills/BTS</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="resume.html">resume</a></li>
+                <li><a href="#media">media</a></li>
+                <li><a href="gallery.html">gallery</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Headshots Section -->
-        <section id="headshots" class="gallery-section">
-            <h2>Headshots</h2>
-            <div class="gallery">
-                <a href="#img1"><img src="https://via.placeholder.com/600x400?text=Headshot+1" alt="Headshot 1"></a>
-                <a href="#img2"><img src="https://via.placeholder.com/600x400?text=Headshot+2" alt="Headshot 2"></a>
-                <a href="#img3"><img src="https://via.placeholder.com/600x400?text=Headshot+3" alt="Headshot 3"></a>
-                <a href="#img4"><img src="https://via.placeholder.com/600x400?text=Headshot+4" alt="Headshot 4"></a>
-            </div>
-        </section>
+    <!-- Spacer to ensure gallery doesn't overlap with the fixed navbar -->
+    <div style="height: 100px;"></div>
 
-        <!-- Digitals Section -->
-        <section id="digitals" class="gallery-section">
-            <h2>Digitals</h2>
-            <div class="gallery">
-                <a href="#img5"><img src="https://via.placeholder.com/600x400?text=Digital+1" alt="Digital 1"></a>
-                <a href="#img6"><img src="https://via.placeholder.com/600x400?text=Digital+2" alt="Digital 2"></a>
-                <a href="#img7"><img src="https://via.placeholder.com/600x400?text=Digital+3" alt="Digital 3"></a>
-                <a href="#img8"><img src="https://via.placeholder.com/600x400?text=Digital+4" alt="Digital 4"></a>
-            </div>
-        </section>
+    <!-- Gallery Navigation -->
+    <section id="gallery">
+        <header>
+            <h1>Image Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('headshots')">Headshots</a></li>
+                    <li><a onclick="showSection('digitals')">Digitals</a></li>
+                    <li><a onclick="showSection('modeling-portfolio')">Modeling Portfolio</a></li>
+                    <li><a onclick="showSection('commercial-photos')">Commercial Photos</a></li>
+                    <li><a onclick="showSection('bts')">Production Stills/BTS</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Modeling Portfolio Section -->
-        <section id="modeling-portfolio" class="gallery-section">
-            <h2>Modeling Portfolio</h2>
-            <div class="gallery">
-                <a href="#img9"><img src="https://via.placeholder.com/600x400?text=Modeling+1" alt="Modeling 1"></a>
-                <a href="#img10"><img src="https://via.placeholder.com/600x400?text=Modeling+2" alt="Modeling 2"></a>
-                <a href="#img11"><img src="https://via.placeholder.com/600x400?text=Modeling+3" alt="Modeling 3"></a>
-                <a href="#img12"><img src="https://via.placeholder.com/600x400?text=Modeling+4" alt="Modeling 4"></a>
-            </div>
-        </section>
+        <main>
+            <!-- Headshots Section -->
+            <section id="headshots" class="gallery-section">
+                <h2>Headshots</h2>
+                <div class="gallery">
+                    <a href="#img1"><img src="https://via.placeholder.com/600x400?text=Headshot+1" alt="Headshot 1"></a>
+                    <a href="#img2"><img src="https://via.placeholder.com/600x400?text=Headshot+2" alt="Headshot 2"></a>
+                    <a href="#img3"><img src="https://via.placeholder.com/600x400?text=Headshot+3" alt="Headshot 3"></a>
+                    <a href="#img4"><img src="https://via.placeholder.com/600x400?text=Headshot+4" alt="Headshot 4"></a>
+                </div>
+            </section>
 
-        <!-- Commercial Photos Section -->
-        <section id="commercial-photos" class="gallery-section">
-            <h2>Commercial Photos</h2>
-            <div class="gallery">
-                <a href="#img13"><img src="https://via.placeholder.com/600x400?text=Commercial+1" alt="Commercial 1"></a>
-                <a href="#img14"><img src="https://via.placeholder.com/600x400?text=Commercial+2" alt="Commercial 2"></a>
-                <a href="#img15"><img src="https://via.placeholder.com/600x400?text=Commercial+3" alt="Commercial 3"></a>
-                <a href="#img16"><img src="https://via.placeholder.com/600x400?text=Commercial+4" alt="Commercial 4"></a>
-            </div>
-        </section>
+            <!-- Digitals Section -->
+            <section id="digitals" class="gallery-section">
+                <h2>Digitals</h2>
+                <div class="gallery">
+                    <a href="#img5"><img src="https://via.placeholder.com/600x400?text=Digital+1" alt="Digital 1"></a>
+                    <a href="#img6"><img src="https://via.placeholder.com/600x400?text=Digital+2" alt="Digital 2"></a>
+                    <a href="#img7"><img src="https://via.placeholder.com/600x400?text=Digital+3" alt="Digital 3"></a>
+                    <a href="#img8"><img src="https://via.placeholder.com/600x400?text=Digital+4" alt="Digital 4"></a>
+                </div>
+            </section>
 
-        <!-- Production Stills/BTS Section -->
-        <section id="bts" class="gallery-section">
-            <h2>Production Stills/BTS</h2>
-            <div class="gallery">
-                <a href="#img17"><img src="https://via.placeholder.com/600x400?text=BTS+1" alt="BTS 1"></a>
-                <a href="#img18"><img src="https://via.placeholder.com/600x400?text=BTS+2" alt="BTS 2"></a>
-                <a href="#img19"><img src="https://via.placeholder.com/600x400?text=BTS+3" alt="BTS 3"></a>
-                <a href="#img20"><img src="https://via.placeholder.com/600x400?text=BTS+4" alt="BTS 4"></a>
-            </div>
-        </section>
-    </main>
+            <!-- Modeling Portfolio Section -->
+            <section id="modeling-portfolio" class="gallery-section">
+                <h2>Modeling Portfolio</h2>
+                <div class="gallery">
+                    <a href="#img9"><img src="https://via.placeholder.com/600x400?text=Modeling+1" alt="Modeling 1"></a>
+                    <a href="#img10"><img src="https://via.placeholder.com/600x400?text=Modeling+2" alt="Modeling 2"></a>
+                    <a href="#img11"><img src="https://via.placeholder.com/600x400?text=Modeling+3" alt="Modeling 3"></a>
+                    <a href="#img12"><img src="https://via.placeholder.com/600x400?text=Modeling+4" alt="Modeling 4"></a>
+                </div>
+            </section>
+
+            <!-- Commercial Photos Section -->
+            <section id="commercial-photos" class="gallery-section">
+                <h2>Commercial Photos</h2>
+                <div class="gallery">
+                    <a href="#img13"><img src="https://via.placeholder.com/600x400?text=Commercial+1" alt="Commercial 1"></a>
+                    <a href="#img14"><img src="https://via.placeholder.com/600x400?text=Commercial+2" alt="Commercial 2"></a>
+                    <a href="#img15"><img src="https://via.placeholder.com/600x400?text=Commercial+3" alt="Commercial 3"></a>
+                    <a href="#img16"><img src="https://via.placeholder.com/600x400?text=Commercial+4" alt="Commercial 4"></a>
+                </div>
+            </section>
+
+            <!-- Production Stills/BTS Section -->
+            <section id="bts" class="gallery-section">
+                <h2>Production Stills/BTS</h2>
+                <div class="gallery">
+                    <a href="#img17"><img src="https://via.placeholder.com/600x400?text=BTS+1" alt="BTS 1"></a>
+                    <a href="#img18"><img src="https://via.placeholder.com/600x400?text=BTS+2" alt="BTS 2"></a>
+                    <a href="#img19"><img src="https://via.placeholder.com/600x400?text=BTS+3" alt="BTS 3"></a>
+                    <a href="#img20"><img src="https://via.placeholder.com/600x400?text=BTS+4" alt="BTS 4"></a>
+                </div>
+            </section>
+        </main>
+    </section>
 
     <!-- Full-Screen Image Overlay -->
     <div id="img1" class="overlay">
