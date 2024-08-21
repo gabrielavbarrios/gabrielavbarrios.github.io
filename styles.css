@@ -188,7 +188,6 @@ nav ul li a {
     filter: brightness(110%);
 }
 
-/* Full-Screen Image Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -218,6 +217,42 @@ nav ul li a {
     color: white;
     font-size: 2rem;
     cursor: pointer;
+}
+
+/* Large Previous and Next Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem; /* Larger size for visibility */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    z-index: 1001;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 30px; /* Place it on the left side of the image */
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 30px; /* Place it on the right side of the image */
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hover effect for arrows */
+}
+
+/* Ensure that the overlay content is centered */
+.overlay img {
+    margin: 0 auto;
 }
 
 /* Center the Image Gallery Header */
