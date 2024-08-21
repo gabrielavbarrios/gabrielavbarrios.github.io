@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .carousel-container {
+            width: 80%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        .carousel-btn.left {
+            left: 10px;
+        }
+
+        .carousel-btn.right {
+            right: 10px;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left" onclick="prevSlide()">‹</button>
+            <div class="carousel">
+                <img src="https://via.placeholder.com/600x300?text=Image+1" alt="Image 1">
+                <img src="https://via.placeholder.com/600x300?text=Image+2" alt="Image 2">
+                <img src="https://via.placeholder.com/600x300?text=Image+3" alt="Image 3">
+                <img src="https://via.placeholder.com/600x300?text=Image+4" alt="Image 4">
+            </div>
+            <button class="carousel-btn right" onclick="nextSlide()">›</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+
+        function nextSlide() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * (images[0].clientWidth + 20); // Add gap between images
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        window.addEventListener('resize', updateCarousel);
+    </script>
+</body>
+</html>
