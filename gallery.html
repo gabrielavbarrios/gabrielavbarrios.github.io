@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Photo Gallery</title>
+    <title>Image Gallery</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,108 +14,181 @@
         }
 
         body {
-            background-color: #f8f8f8;
+            background-color: #3c3b4a;
+            color: white;
             padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #7aa8ff;
+            margin-bottom: 20px;
+        }
+
+        .categories {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .carousel-container {
-            width: 80%;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: #fff;
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.4s ease-in-out;
             gap: 20px;
-            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
         }
 
-        .carousel img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
+        .categories a {
+            text-decoration: none;
+            color: #ffcc00;
             padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #282a36;
+            transition: background-color 0.3s;
+        }
+
+        .categories a:hover {
+            background-color: #ffcc00;
+            color: #282a36;
+        }
+
+        .gallery-section {
+            margin: 20px 0;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #7aa8ff;
+            font-size: 2rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 50%;
-            outline: none;
+            transition: transform 0.3s, filter 0.3s;
         }
 
-        .carousel-btn.left {
-            left: 10px;
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(110%);
         }
 
-        .carousel-btn.right {
-            right: 10px;
-        }
-
-        .carousel-wrapper {
-            position: relative;
-            display: flex;
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
             justify-content: center;
             align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .overlay:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <button class="carousel-btn left" onclick="prevSlide()">‹</button>
-            <div class="carousel">
-                <img src="https://via.placeholder.com/600x300?text=Image+1" alt="Image 1">
-                <img src="https://via.placeholder.com/600x300?text=Image+2" alt="Image 2">
-                <img src="https://via.placeholder.com/600x300?text=Image+3" alt="Image 3">
-                <img src="https://via.placeholder.com/600x300?text=Image+4" alt="Image 4">
-            </div>
-            <button class="carousel-btn right" onclick="nextSlide()">›</button>
-        </div>
+    <h1>Image Gallery</h1>
+    <div class="categories">
+        <a href="#headshots">Headshots</a>
+        <a href="#digitals">Digitals</a>
+        <a href="#modeling-portfolio">Modeling Portfolio</a>
+        <a href="#commercial-photos">Commercial Photos</a>
+        <a href="#bts">Production Stills/BTS</a>
     </div>
 
-    <script>
-        let currentIndex = 0;
-        const carousel = document.querySelector('.carousel');
-        const images = document.querySelectorAll('.carousel img');
+    <!-- Headshots Section -->
+    <section id="headshots" class="gallery-section">
+        <h2>Headshots</h2>
+        <div class="gallery">
+            <a href="#img1"><img src="https://via.placeholder.com/600x400?text=Headshot+1" alt="Headshot 1"></a>
+            <a href="#img2"><img src="https://via.placeholder.com/600x400?text=Headshot+2" alt="Headshot 2"></a>
+            <a href="#img3"><img src="https://via.placeholder.com/600x400?text=Headshot+3" alt="Headshot 3"></a>
+            <a href="#img4"><img src="https://via.placeholder.com/600x400?text=Headshot+4" alt="Headshot 4"></a>
+        </div>
+    </section>
 
-        function nextSlide() {
-            if (currentIndex < images.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateCarousel();
-        }
+    <!-- Digitals Section -->
+    <section id="digitals" class="gallery-section">
+        <h2>Digitals</h2>
+        <div class="gallery">
+            <a href="#img5"><img src="https://via.placeholder.com/600x400?text=Digital+1" alt="Digital 1"></a>
+            <a href="#img6"><img src="https://via.placeholder.com/600x400?text=Digital+2" alt="Digital 2"></a>
+            <a href="#img7"><img src="https://via.placeholder.com/600x400?text=Digital+3" alt="Digital 3"></a>
+            <a href="#img8"><img src="https://via.placeholder.com/600x400?text=Digital+4" alt="Digital 4"></a>
+        </div>
+    </section>
 
-        function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = images.length - 1;
-            }
-            updateCarousel();
-        }
+    <!-- Modeling Portfolio Section -->
+    <section id="modeling-portfolio" class="gallery-section">
+        <h2>Modeling Portfolio</h2>
+        <div class="gallery">
+            <a href="#img9"><img src="https://via.placeholder.com/600x400?text=Modeling+1" alt="Modeling 1"></a>
+            <a href="#img10"><img src="https://via.placeholder.com/600x400?text=Modeling+2" alt="Modeling 2"></a>
+            <a href="#img11"><img src="https://via.placeholder.com/600x400?text=Modeling+3" alt="Modeling 3"></a>
+            <a href="#img12"><img src="https://via.placeholder.com/600x400?text=Modeling+4" alt="Modeling 4"></a>
+        </div>
+    </section>
 
-        function updateCarousel() {
-            const offset = -currentIndex * (images[0].clientWidth + 20); // Add gap between images
-            carousel.style.transform = `translateX(${offset}px)`;
-        }
+    <!-- Commercial Photos Section -->
+    <section id="commercial-photos" class="gallery-section">
+        <h2>Commercial Photos</h2>
+        <div class="gallery">
+            <a href="#img13"><img src="https://via.placeholder.com/600x400?text=Commercial+1" alt="Commercial 1"></a>
+            <a href="#img14"><img src="https://via.placeholder.com/600x400?text=Commercial+2" alt="Commercial 2"></a>
+            <a href="#img15"><img src="https://via.placeholder.com/600x400?text=Commercial+3" alt="Commercial 3"></a>
+            <a href="#img16"><img src="https://via.placeholder.com/600x400?text=Commercial+4" alt="Commercial 4"></a>
+        </div>
+    </section>
 
-        window.addEventListener('resize', updateCarousel);
-    </script>
+    <!-- Production Stills/BTS Section -->
+    <section id="bts" class="gallery-section">
+        <h2>Production Stills/BTS</h2>
+        <div class="gallery">
+            <a href="#img17"><img src="https://via.placeholder.com/600x400?text=BTS+1" alt="BTS 1"></a>
+            <a href="#img18"><img src="https://via.placeholder.com/600x400?text=BTS+2" alt="BTS 2"></a>
+            <a href="#img19"><img src="https://via.placeholder.com/600x400?text=BTS+3" alt="BTS 3"></a>
+            <a href="#img20"><img src="https://via.placeholder.com/600x400?text=BTS+4" alt="BTS 4"></a>
+        </div>
+    </section>
+
+    <!-- Full-Screen Image Overlay -->
+    <div id="img1" class="overlay">
+        <span class="close" onclick="location.hash=''">&times;</span>
+        <img src="https://via.placeholder.com/600x400?text=Headshot+1" alt="Headshot 1">
+    </div>
+
+    <div id="img2" class="overlay">
+        <span class="close" onclick="location.hash=''">&times;</span>
+        <img src="https://via.placeholder.com/600x400?text=Headshot+2" alt="Headshot 2">
+    </div>
+
+    <!-- Repeat for all images (create an overlay for each image) -->
+
 </body>
+
 </html>
