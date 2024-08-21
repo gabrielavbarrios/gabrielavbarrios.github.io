@@ -339,7 +339,7 @@ body {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
-    color: #007BFF;
+    color: #555555;
     text-decoration: none;
 }
 
@@ -376,7 +376,7 @@ textarea {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #666666;
     color: #fff;
     text-decoration: none;
     border: none;
@@ -386,5 +386,5 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #3b3b3b;
 }
