@@ -253,7 +253,7 @@ nav ul li a {
 #gallery nav ul li a {
     text-decoration: none;
     font-size: 1.1rem;
-    color: #007BFF; /* Make the links more distinct */
+    color: #2e2e2e; /* Make the links more distinct */
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
@@ -261,7 +261,7 @@ nav ul li a {
 }
 
 #gallery nav ul li a:hover {
-    background-color: #007BFF; /* Add a background color on hover */
+    background-color: #2e2e2e; /* Add a background color on hover */
     color: #fff; /* Change text color on hover */
 }
 
