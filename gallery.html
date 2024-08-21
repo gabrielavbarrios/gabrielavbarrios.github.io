@@ -108,9 +108,25 @@
 
                 
             ],
-            // Add more galleries here...
         };
+        function showSection(sectionId) {
+            // Hide all gallery sections
+            const sections = document.querySelectorAll('.gallery-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
 
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Show the first section (Headshots) by default on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('headshots');
+        });
         function openOverlay(index, section) {
             currentImageIndex = index;
             currentSection = section;
