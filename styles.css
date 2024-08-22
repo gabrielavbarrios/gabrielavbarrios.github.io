@@ -397,16 +397,19 @@ textarea {
 .submit-button:hover {
     background-color: #353535;
 }
-
 .video-container {
     background-color: #fff;
     border-radius: 5px;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit the maximum width */
+    margin: 100px auto 2rem; /* Center horizontally and add top margin for header */
+    width: 90%; /* Take up 90% of the parent container's width */
 }
 
 .video-container h2 {
     margin-top: 0;
+    margin-bottom: 1rem; /* Add some space below the title */
     color: #333;
     text-align: center;
 }
@@ -416,6 +419,7 @@ textarea {
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
 }
 
 .video-wrapper iframe {
