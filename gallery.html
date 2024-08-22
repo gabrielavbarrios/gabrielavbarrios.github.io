@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this style for the active navigation item */
+        #gallery nav ul li a.active {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,11 +38,11 @@
         <h2>Image Gallery</h2>
         <nav>
             <ul>
-                <li><a onclick="showSection('headshots')">Headshots</a></li>
-                <li><a onclick="showSection('digitals')">Digitals</a></li>
-                <li><a onclick="showSection('modeling-portfolio')">Modeling Portfolio</a></li>
-                <li><a onclick="showSection('commercial-photos')">Commercial Photos</a></li>
-                <li><a onclick="showSection('bts')">Production Stills/BTS</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('headshots', this)" class="active">Headshots</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('digitals', this)">Digitals</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('modeling-portfolio', this)">Modeling Portfolio</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('commercial-photos', this)">Commercial Photos</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('bts', this)">Production Stills/BTS</a></li>
             </ul>
         </nav>
         <div style="height: 20px;"></div>
@@ -103,11 +110,10 @@
                 'images/11.jpg',
                 'images/12.jpeg',
                 'images/13.jpeg',
-
-                
             ],
         };
-        function showSection(sectionId) {
+
+        function showSection(sectionId, clickedElement) {
             // Hide all gallery sections
             const sections = document.querySelectorAll('.gallery-section');
             sections.forEach(section => {
@@ -119,12 +125,22 @@
             if (selectedSection) {
                 selectedSection.style.display = 'block';
             }
+
+            // Remove 'active' class from all navigation items
+            const navItems = document.querySelectorAll('#gallery nav ul li a');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked navigation item
+            clickedElement.classList.add('active');
         }
 
         // Show the first section (Headshots) by default on page load
         document.addEventListener('DOMContentLoaded', function () {
-            showSection('headshots');
+            showSection('headshots', document.querySelector('#gallery nav ul li a'));
         });
+
         function openOverlay(index, section) {
             currentImageIndex = index;
             currentSection = section;
