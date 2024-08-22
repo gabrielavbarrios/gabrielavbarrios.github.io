@@ -408,6 +408,7 @@ textarea {
 .video-container h2 {
     margin-top: 0;
     color: #333;
+    text-align: center;
 }
 
 .video-wrapper {
