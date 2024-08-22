@@ -7,7 +7,6 @@
     <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add this style for the active navigation item */
         #gallery nav ul li a.active {
             background-color: #ddd;
             color: black;
@@ -16,70 +15,21 @@
 </head>
 
 <body>
-    <!-- Main Website Navbar -->
     <header>
-        <h1>GABRIELA BARRIOS</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="#contact">contact</a></li>
-                <li><a href="resume.html">resume</a></li>
-                <li><a href="#media">media</a></li>
-                <li><a href="gallery.html">gallery</a></li>
-            </ul>
-        </nav>
+        <h1 id="siteName"></h1>
+        <nav id="mainNav"></nav>
     </header>
 
-    <!-- Spacer to ensure gallery doesn't overlap with the fixed navbar -->
     <div style="height: 50px;"></div>
 
-    <!-- Gallery Navigation -->
     <section id="gallery">
         <h2>Image Gallery</h2>
-        <nav>
-            <ul>
-                <li><a href="javascript:void(0);" onclick="showSection('headshots', this)" class="active">Headshots</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('digitals', this)">Digitals</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('modeling-portfolio', this)">Modeling Portfolio</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('commercial-photos', this)">Commercial Photos</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('bts', this)">Production Stills/BTS</a></li>
-            </ul>
-        </nav>
+        <nav id="galleryNav"></nav>
         <div style="height: 20px;"></div>
 
-        <main>
-            <!-- Headshots Section -->
-            <section id="headshots" class="gallery-section">
-                <h3>Headshots</h3>
-                <div class="gallery">
-                    <a href="javascript:void(0);" onclick="openOverlay(0, 'headshots')"><img src="images/full_Gabriela_Barrios_Headshot.jpg" alt="Headshot 1"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(1, 'headshots')"><img src="images/full_Gabriela Barrios_Headshot_2.jpg" alt="Headshot 2"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(2, 'headshots')"><img src="images/full_Gabriela_Barrios_Headshot_3.jpg" alt="Headshot 3"></a>
-                </div>
-            </section>
-
-            <section id='modeling-portfolio' class="gallery-section">
-                <h3>Modeling Portfolio</h3>
-                <div class="gallery">
-                    <a href="javascript:void(0);" onclick="openOverlay(0, 'modeling-portfolio')"><img src="images/1.jpg" alt="Modeling 1"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(1, 'modeling-portfolio')"><img src="images/2.jpg" alt="Modeling 2"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(2, 'modeling-portfolio')"><img src="images/3.jpg" alt="Modeling 3"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(3, 'modeling-portfolio')"><img src="images/4.jpeg" alt="Modeling 4"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(4, 'modeling-portfolio')"><img src="images/5.jpeg" alt="Modeling 5"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(5, 'modeling-portfolio')"><img src="images/6.jpeg" alt="Modeling 6"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(7, 'modeling-portfolio')"><img src="images/8.jpeg" alt="Modeling 8"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(8, 'modeling-portfolio')"><img src="images/9.jpeg" alt="Modeling 9"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(9, 'modeling-portfolio')"><img src="images/10.jpg" alt="Modeling 19"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(10, 'modeling-portfolio')"><img src="images/11.jpg" alt="Modeling 11"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(11, 'modeling-portfolio')"><img src="images/12.jpeg" alt="Modeling 12"></a>
-                    <a href="javascript:void(0);" onclick="openOverlay(12, 'modeling-portfolio')"><img src="images/13.jpeg" alt="Modeling 13"></a>
-                </div>
-            </section>
-
-        </main>
+        <main id="galleryMain"></main>
     </section>
 
-    <!-- Full-Screen Image Overlay -->
     <div id="imageOverlay" class="overlay" onclick="closeOverlay(event)">
         <span class="close">&times;</span>
         <img id="overlayImage" src="" alt="">
@@ -88,65 +38,114 @@
     </div>
 
     <script>
+        const siteConfig = {
+            siteName: "GABRIELA BARRIOS",
+            mainNavLinks: [
+                { text: "home", href: "index.html" },
+                { text: "contact", href: "#contact" },
+                { text: "resume", href: "resume.html" },
+                { text: "media", href: "#media" },
+                { text: "gallery", href: "gallery.html" }
+            ],
+            galleryCategories: [
+                { id: "headshots", name: "Headshots" },
+                { id: "digitals", name: "Digitals" },
+                { id: "modeling-portfolio", name: "Modeling Portfolio" },
+                { id: "commercial-photos", name: "Commercial Photos" },
+                { id: "bts", name: "Production Stills/BTS" }
+            ],
+            galleries: {
+                'headshots': [
+                    { src: "images/full_Gabriela_Barrios_Headshot.jpg", alt: "Headshot 1" },
+                    { src: "images/full_Gabriela Barrios_Headshot_2.jpg", alt: "Headshot 2" },
+                    { src: "images/full_Gabriela_Barrios_Headshot_3.jpg", alt: "Headshot 3" }
+                ],
+                'modeling-portfolio': [
+                    { src: "images/1.jpg", alt: "Modeling 1" },
+                    { src: "images/2.jpg", alt: "Modeling 2" },
+                    { src: "images/3.jpg", alt: "Modeling 3" },
+                    { src: "images/4.jpeg", alt: "Modeling 4" },
+                    { src: "images/5.jpeg", alt: "Modeling 5" },
+                    { src: "images/6.jpeg", alt: "Modeling 6" },
+                    { src: "images/8.jpeg", alt: "Modeling 8" },
+                    { src: "images/9.jpeg", alt: "Modeling 9" },
+                    { src: "images/10.jpg", alt: "Modeling 10" },
+                    { src: "images/11.jpg", alt: "Modeling 11" },
+                    { src: "images/12.jpeg", alt: "Modeling 12" },
+                    { src: "images/13.jpeg", alt: "Modeling 13" }
+                ],
+                // Add other gallery categories here
+            }
+        };
+
         let currentImageIndex = 0;
         let currentSection = '';
 
-        const galleries = {
-            'headshots': [
-                'images/full_Gabriela_Barrios_Headshot.jpg',
-                'images/full_Gabriela Barrios_Headshot_2.jpg',
-                'images/full_Gabriela_Barrios_Headshot_3.jpg'
-            ],
-            'modeling-portfolio': [
-                'images/1.jpg',
-                'images/2.jpg',
-                'images/3.jpg',
-                'images/4.jpeg',
-                'images/5.jpeg',
-                'images/6.jpeg',
-                'images/8.jpg',
-                'images/9.jpeg',
-                'images/10.jpg',
-                'images/11.jpg',
-                'images/12.jpeg',
-                'images/13.jpeg',
-            ],
-        };
+        function initializeSite() {
+            document.getElementById('siteName').textContent = siteConfig.siteName;
+            createMainNav();
+            createGalleryNav();
+            createGallerySections();
+            showSection(siteConfig.galleryCategories[0].id, document.querySelector('#galleryNav ul li a'));
+        }
+
+        function createMainNav() {
+            const navHtml = `
+                <ul>
+                    ${siteConfig.mainNavLinks.map(link => `<li><a href="${link.href}">${link.text}</a></li>`).join('')}
+                </ul>
+            `;
+            document.getElementById('mainNav').innerHTML = navHtml;
+        }
+
+        function createGalleryNav() {
+            const navHtml = `
+                <ul>
+                    ${siteConfig.galleryCategories.map((category, index) => 
+                        `<li><a href="javascript:void(0);" onclick="showSection('${category.id}', this)" ${index === 0 ? 'class="active"' : ''}>${category.name}</a></li>`
+                    ).join('')}
+                </ul>
+            `;
+            document.getElementById('galleryNav').innerHTML = navHtml;
+        }
+
+        function createGallerySections() {
+            const mainHtml = siteConfig.galleryCategories.map(category => `
+                <section id="${category.id}" class="gallery-section">
+                    <h3>${category.name}</h3>
+                    <div class="gallery">
+                        ${(siteConfig.galleries[category.id] || []).map((img, index) => `
+                            <a href="javascript:void(0);" onclick="openOverlay(${index}, '${category.id}')">
+                                <img src="${img.src}" alt="${img.alt}">
+                            </a>
+                        `).join('')}
+                    </div>
+                </section>
+            `).join('');
+            document.getElementById('galleryMain').innerHTML = mainHtml;
+        }
 
         function showSection(sectionId, clickedElement) {
-            // Hide all gallery sections
-            const sections = document.querySelectorAll('.gallery-section');
-            sections.forEach(section => {
+            document.querySelectorAll('.gallery-section').forEach(section => {
                 section.style.display = 'none';
             });
-
-            // Show the selected section
             const selectedSection = document.getElementById(sectionId);
             if (selectedSection) {
                 selectedSection.style.display = 'block';
             }
-
-            // Remove 'active' class from all navigation items
-            const navItems = document.querySelectorAll('#gallery nav ul li a');
-            navItems.forEach(item => {
+            document.querySelectorAll('#galleryNav ul li a').forEach(item => {
                 item.classList.remove('active');
             });
-
-            // Add 'active' class to the clicked navigation item
             clickedElement.classList.add('active');
         }
-
-        // Show the first section (Headshots) by default on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            showSection('headshots', document.querySelector('#gallery nav ul li a'));
-        });
 
         function openOverlay(index, section) {
             currentImageIndex = index;
             currentSection = section;
             const overlay = document.getElementById('imageOverlay');
             const overlayImage = document.getElementById('overlayImage');
-            overlayImage.src = galleries[section][index];
+            overlayImage.src = siteConfig.galleries[section][index].src;
+            overlayImage.alt = siteConfig.galleries[section][index].alt;
             overlay.style.display = 'flex';
         }
 
@@ -157,23 +156,29 @@
         }
 
         function prevImage(event) {
-            event.stopPropagation(); // Prevent closing overlay when clicking arrow
+            event.stopPropagation();
             if (currentImageIndex > 0) {
                 currentImageIndex--;
             } else {
-                currentImageIndex = galleries[currentSection].length - 1;
+                currentImageIndex = siteConfig.galleries[currentSection].length - 1;
             }
-            document.getElementById('overlayImage').src = galleries[currentSection][currentImageIndex];
+            updateOverlayImage();
         }
 
         function nextImage(event) {
-            event.stopPropagation(); // Prevent closing overlay when clicking arrow
-            if (currentImageIndex < galleries[currentSection].length - 1) {
+            event.stopPropagation();
+            if (currentImageIndex < siteConfig.galleries[currentSection].length - 1) {
                 currentImageIndex++;
             } else {
                 currentImageIndex = 0;
             }
-            document.getElementById('overlayImage').src = galleries[currentSection][currentImageIndex];
+            updateOverlayImage();
+        }
+
+        function updateOverlayImage() {
+            const overlayImage = document.getElementById('overlayImage');
+            overlayImage.src = siteConfig.galleries[currentSection][currentImageIndex].src;
+            overlayImage.alt = siteConfig.galleries[currentSection][currentImageIndex].alt;
         }
 
         document.addEventListener('keydown', function (event) {
@@ -188,6 +193,8 @@
                 }
             }
         });
+
+        document.addEventListener('DOMContentLoaded', initializeSite);
     </script>
 </body>
 
