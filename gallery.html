@@ -11,13 +11,24 @@
             background-color: #ddd;
             color: black;
         }
+        header h1 {
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 id="siteName"></h1>
-        <nav id="mainNav"></nav>
+        <h1 onclick="window.location.href='index.html'">GABRIELA BARRIOS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="resume.html">resume</a></li>
+                <li><a href="media.html">media</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div style="height: 50px;"></div>
@@ -39,14 +50,6 @@
 
     <script>
         const siteConfig = {
-            siteName: "GABRIELA BARRIOS",
-            mainNavLinks: [
-                { text: "home", href: "index.html" },
-                { text: "contact", href: "contact.html" },
-                { text: "resume", href: "resume.html" },
-                { text: "media", href: "media.html" },
-                { text: "gallery", href: "gallery.html" }
-            ],
             galleryCategories: [
                 { id: "headshots", name: "Headshots" },
                 { id: "digitals", name: "Digitals" },
@@ -82,20 +85,9 @@
         let currentSection = '';
 
         function initializeSite() {
-            document.getElementById('siteName').textContent = siteConfig.siteName;
-            createMainNav();
             createGalleryNav();
             createGallerySections();
             showSection(siteConfig.galleryCategories[0].id, document.querySelector('#galleryNav ul li a'));
-        }
-
-        function createMainNav() {
-            const navHtml = `
-                <ul>
-                    ${siteConfig.mainNavLinks.map(link => `<li><a href="${link.href}">${link.text}</a></li>`).join('')}
-                </ul>
-            `;
-            document.getElementById('mainNav').innerHTML = navHtml;
         }
 
         function createGalleryNav() {
