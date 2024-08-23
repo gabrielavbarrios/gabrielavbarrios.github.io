@@ -102,14 +102,21 @@ body {
       bottom: 10px;
       left: 10px;
     }
-  }
+    .acting-card,
+    .modeling-card {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-@media screen and (orientation: landscape) and (max-width: 768px) {
+    .comp-card {
+        padding: 0 10px; /* Add some horizontal padding for better spacing */
+    }
     .image-fullscreen img {
         height: auto;
         width: 100%;
     }
-}
+  }
+
 .resume-section {
     padding: 50px 20px;
     background-color: #e0e0e0;
