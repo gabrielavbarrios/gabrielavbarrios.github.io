@@ -109,13 +109,7 @@ body {
 }
 
 
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-    display: block; /* Remove any potential inline spacing */
-}
+
 
 .download-button {
     display: inline-block;
@@ -425,9 +419,10 @@ textarea {
 .responsive-image {
     max-width: 100%;
     height: auto;
-    width: 400px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
 }
-
 .download-button {
     display: inline-block; /* Change from block to inline-block to prevent full-width stretching */
     margin-top: 10px;
