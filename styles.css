@@ -301,13 +301,13 @@ body {
 
 .contact-container {
     max-width: 600px;
-    margin: 100px auto 0 auto; /* Add top margin to bring the content down */
+    margin: 100px auto 0 auto; /* Adds space between header and content */
     padding: 20px;
     text-align: center;
 }
 
 .contact-title {
-    margin-top: 40px; /* Ensure there's enough space below the header */
+    margin-top: 40px;
 }
 
 .contact-links {
@@ -325,6 +325,22 @@ body {
 .contact-links a:hover {
     text-decoration: underline;
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 15px;
+}
+
+.social-links img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+}
+
 
 .form-group {
     margin-bottom: 15px;
