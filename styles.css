@@ -297,7 +297,7 @@ body {
 }
 body {
     background-color: #fff; /* White background */
-}
+
 .contact-container {
     max-width: 600px;
     margin: 100px auto 0 auto;
@@ -312,6 +312,7 @@ body {
 .contact-links {
     margin-bottom: 20px;
 }
+
 .contact-links a {
     display: block;
     margin-bottom: 10px;
@@ -328,12 +329,12 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center; /* Center the icons horizontally */
-    gap: 20px; /* Add space between the icons */
+    gap: 25px; /* Add space between the icons */
 }
 
 .social-links img {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
 }
 
 .form-group {
