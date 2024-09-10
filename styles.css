@@ -325,16 +325,32 @@ body {
     text-decoration: underline;
 }
 
-.social-links {
+.contact-social-links { /* Separate styling for contact page social links */
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
-    gap: 25px; /* Add space between the icons */
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Home Page social links, positioned at bottom left */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
 }
 
 .social-links img {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 .form-group {
