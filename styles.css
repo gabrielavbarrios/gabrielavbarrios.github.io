@@ -327,12 +327,12 @@ body {
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px; /* Space between email links and icons */
+    text-align: center; /* Center the icons */
 }
 
 .social-links a {
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -340,7 +340,6 @@ body {
     width: 40px; /* Adjust the size of the icons */
     height: 40px;
 }
-
 
 .form-group {
     margin-bottom: 15px;
