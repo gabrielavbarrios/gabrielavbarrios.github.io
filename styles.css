@@ -310,6 +310,7 @@ body {
     margin: 100px auto 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: #e0e0e0;
 }
 
 .contact-title {
@@ -526,3 +527,21 @@ textarea {
         margin-bottom: 20px;
     }
   }
+.contact-title {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.gallery-item {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.caption {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: center;
+}

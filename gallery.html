@@ -107,13 +107,13 @@
                     { src: "images/Gabriela_Barrios_Outside_Chicago_2.jpg", alt: "Commercial 8" },
                 ],
                 'bts': [
-                    { src: "images/Arrojo_1.jpg", alt: "Still 1" },
-                    { src: "images/Arrojo_2.jpg", alt: "Still 2" },
-                    { src: "images/Climate_Power.png", alt: "Still 3" },
-                    { src: "images/Law_Order.JPG", alt: "Still 4" },
-                    { src: "images/Chi_PD_2.jpg", alt: "Still 5" },
-                    { src: "images/Chi_PD.jpg", alt: "Still 6" },
-                    { src: "images/Bear.jpg", alt: "Still 7" },
+                    { src: "images/Arrojo_1.jpg", alt: "Still 1", caption: "Arrojo 1" },
+                    { src: "images/Arrojo_2.jpg", alt: "Still 2", caption: "Arrojo 2" },
+                    { src: "images/Climate_Power.png", alt: "Still 3", caption: "Climate Power" },
+                    { src: "images/Law_Order.JPG", alt: "Still 4", caption: "Law & Order" },
+                    { src: "images/Chi_PD_2.jpg", alt: "Still 5", caption: "Chicago PD 2" },
+                    { src: "images/Chi_PD.jpg", alt: "Still 6", caption: "Chicago PD" },
+                    { src: "images/Bear.jpg", alt: "Still 7", caption: "The Bear" },
                 ],
                 // Add other gallery categories here
             }
@@ -145,9 +145,12 @@
                     <h3>${category.name}</h3>
                     <div class="gallery">
                         ${(siteConfig.galleries[category.id] || []).map((img, index) => `
-                            <a href="javascript:void(0);" onclick="openOverlay(${index}, '${category.id}')">
-                                <img src="${img.src}" alt="${img.alt}">
-                            </a>
+                            <div class="gallery-item">
+                                <a href="javascript:void(0);" onclick="openOverlay(${index}, '${category.id}')">
+                                    <img src="${img.src}" alt="${img.alt}">
+                                </a>
+                                ${category.id === 'bts' ? `<p class="caption">${img.caption}</p>` : ''}
+                            </div>
                         `).join('')}
                     </div>
                 </section>
