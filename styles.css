@@ -24,7 +24,7 @@ body {
   header h1 {
     font-size: 1.8em;
     margin: 0;
-    -family: 'Impact Black', sans-serif; /* Use a bold sans-serif font */
+    -family: 'Arial Black', sans-serif; /* Use a bold sans-serif font */
     font-weight: bold;
     color: #000; /* Set the name to black */
     text-transform: uppercase;
