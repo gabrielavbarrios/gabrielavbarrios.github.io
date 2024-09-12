@@ -25,7 +25,7 @@ body {
     font-size: 1.8em;
     margin: 0;
     -family: 'Arial Black', sans-serif; /* Use a bold sans-serif font */
-    font-weight: bold;
+    font-weight: Bold Black;
     color: #000; /* Set the name to black */
     text-transform: uppercase;
   }
