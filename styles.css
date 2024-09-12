@@ -502,7 +502,7 @@ textarea {
     .comp-card {
         padding: 0 10px; /* Add some horizontal padding for better spacing */
         flex-direction: column;
-        gap: 10px;
+        gap: 0px;
     }
     .image-fullscreen img {
         height: auto;
