@@ -131,7 +131,7 @@ body {
     display: none;
     margin: 100px auto; /* Add some top margin to account for header */
     padding: 50px 20px;
-    background-color: #525252;
+    background-color: #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
 }
@@ -402,7 +402,7 @@ textarea {
     background-color: #353535;
 }
 .video-container {
-    background-color: #525252;
+    background-color: #e0e0e0;
     border-radius: 5px;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
