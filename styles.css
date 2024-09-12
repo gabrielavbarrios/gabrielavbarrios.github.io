@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: #333;
     background-color: #f5f5f5;
     overflow-x: hidden; /* Prevent horizontal overflow */
@@ -24,7 +24,7 @@ body {
   header h1 {
     font-size: 1.8em;
     margin: 0;
-    font-family: 'Arial Black', sans-serif; /* Use a bold sans-serif font */
+    font-family: 'Impact Black', sans-serif; /* Use a bold sans-serif font */
     font-weight: bold;
     color: #000; /* Set the name to black */
     text-transform: uppercase;
@@ -46,7 +46,7 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 0.9em; /* Smaller font size */
-    font-family: 'Arial', sans-serif; /* Use a thin sans-serif font */
+    font-family: 'Helvetica', sans-serif; /* Use a thin sans-serif font */
     font-weight: 300; /* Set the font weight to 300 (thin) */
   }
   
