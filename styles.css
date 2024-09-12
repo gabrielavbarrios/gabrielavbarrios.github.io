@@ -24,7 +24,7 @@ body {
   header h1 {
     font-size: 1.8em;
     margin: 0;
-    font-family: 'Impact Black', sans-serif; /* Use a bold sans-serif font */
+    -family: 'Tahoma Black', sans-serif; /* Use a bold sans-serif font */
     font-weight: bold;
     color: #000; /* Set the name to black */
     text-transform: uppercase;
@@ -87,6 +87,7 @@ body {
 
 .resume-section h2 {
     font-size: 2em;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     margin-bottom: 30px;
     text-align: center;
 }
@@ -120,6 +121,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     text-align: center;
 }
 
@@ -140,6 +142,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
     font-size: 2em;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     color: #333;
 }
 
@@ -191,6 +194,7 @@ body {
     right: 20px;
     color: white;
     font-size: 2rem;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     cursor: pointer;
 }
 
@@ -202,7 +206,7 @@ body {
     width: auto;
     padding: 16px;
     color: white;
-    font-weight: bold;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     font-size: 4rem; /* Larger size for visibility */
     user-select: none;
     background-color: rgba(0, 0, 0, 0.4);
@@ -234,6 +238,7 @@ body {
 #gallery h2 {
     text-align: center;
     font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     margin-bottom: 20px; /* Add some spacing below the header */
     color: #333; /* Match it with the existing color scheme */
 }
@@ -242,6 +247,7 @@ body {
 #gallery h2 {
     text-align: center;
     font-size: 2rem;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     margin-bottom: 20px;
     color: #333;
 }
@@ -264,7 +270,7 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     color: #2e2e2e; /* Make the links more distinct */
-    font-weight: bold;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -285,6 +291,7 @@ body {
 
 .gallery-section h3 {
     font-size: 1.5rem;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     margin-bottom: 20px;
     color: #333;
 }
@@ -317,6 +324,7 @@ body {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     color: #464646;
     text-decoration: none;
 }
@@ -329,7 +337,7 @@ body {
 .social-media-title {
     margin-top: 30px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
 }
 
 .contact-social-links { 
@@ -395,6 +403,7 @@ textarea {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     cursor: pointer;
 }
 
@@ -445,6 +454,7 @@ textarea {
 
 .comp-card h3 {
     font-size: 1.8em;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     margin-bottom: 40px;
     color: #333;   
 }
@@ -466,6 +476,7 @@ textarea {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
     width: auto; /* Ensure the width automatically adjusts to content */
     max-width: 300px; /* Optionally, set a maximum width to prevent it from getting too large */
 }
