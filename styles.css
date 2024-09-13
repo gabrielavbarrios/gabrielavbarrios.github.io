@@ -98,8 +98,9 @@ body {
     align-items: flex-start;
     gap: 0; 
     margin: 20px 0;
+    max-height: 60vh; /* Set max height to 60% of viewport height */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
 }
-
 
 .image-block {
     flex: 0 0 50%; /* Each block takes exactly 50% width */
@@ -107,6 +108,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%; /* Ensure full height of container */
+}
+
+.image-block img {
+    max-height: calc(60vh - 60px); /* Subtract space for download button */
+    width: auto;
+    object-fit: contain;
 }
 
 
