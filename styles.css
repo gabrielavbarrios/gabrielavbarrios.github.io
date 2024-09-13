@@ -95,15 +95,17 @@ body {
 .image-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 0; 
-    margin: 20px 0;
+    align-items: center;
+    gap: 0;
+    margin: 20px auto;
     max-height: 60vh; /* Set max height to 60% of viewport height */
     overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
+    max-width: 100%; /* Allow container to take full width */
+    width: 100%;
 }
 
 .image-block {
-    flex: 0 0 50%; /* Each block takes exactly 50% width */
+    flex: 0 1 auto; /* Allow flex items to shrink but not grow */
     max-width: 50%;
     display: flex;
     flex-direction: column;
@@ -113,7 +115,7 @@ body {
 
 .image-block img {
     max-height: calc(60vh - 60px); /* Subtract space for download button */
-    width: auto;
+    width: 100%;
     object-fit: contain;
 }
 
