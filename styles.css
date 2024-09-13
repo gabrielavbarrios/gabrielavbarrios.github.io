@@ -457,22 +457,32 @@ textarea {
     height: 100%;
 }
 
-.comp-card {
-    text-align: center;
+.comp-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
+}
+
+.image-container {
     display: flex;
     justify-content: center;
-    gap: 0px;
-    margin-bottom: 40px;
+    gap: 0;
+    margin: 20px auto;
+    max-height: 60vh;
+    overflow-y: auto;
+    max-width: 100%;
+    width: 100%;
 }
 
-.comp-card h3 {
-    font-size: 2em;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
-    margin-bottom: 40px;
-    color: #333;   
+.image-block {
+    flex: 0 1 auto;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
-
 
 .responsive-image {
     max-width: 100%;
@@ -481,22 +491,35 @@ textarea {
     object-fit: contain;
     display: block;
 }
+
 .download-button {
-    display: inline-block; /* Change from block to inline-block to prevent full-width stretching */
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 20px;
     padding: 8px 16px;
     background-color: #2e2e2e;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
-    width: auto; /* Ensure the width automatically adjusts to content */
-    max-width: 300px; /* Optionally, set a maximum width to prevent it from getting too large */
+    font-weight: 300;
+    width: auto;
+    max-width: 300px;
 }
 
 .download-button:hover {
     background-color: #525252;
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-block {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /* Responsive Styles */
