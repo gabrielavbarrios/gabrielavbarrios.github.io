@@ -319,14 +319,14 @@ body {
 .contact-container {
     max-width: 600px;
     margin: 100px auto 0 auto;
-    padding: 5px 40px 20px 40px;
+    padding: 5px 40px 40px 40px;
     text-align: center;
     background-color: #e0e0e0;
 }
 
 /* Reduce the top margin for subsequent contact-container elements */
 .contact-container + .contact-container {
-    margin-top: 30px; /* Reduced top margin between containers */
+    margin-top: 50px; /* Reduced top margin between containers */
 }
 
 .contact-title {
