@@ -319,18 +319,18 @@ body {
 .contact-container {
     max-width: 600px;
     margin: 100px auto 0 auto;
-    padding: 20px;
+    padding: 5xp 40xp 20px 40xp;
     text-align: center;
     background-color: #e0e0e0;
 }
 
 /* Reduce the top margin for subsequent contact-container elements */
 .contact-container + .contact-container {
-    margin-top: 50px; /* Reduced top margin between containers */
+    margin-top: 30px; /* Reduced top margin between containers */
 }
 
 .contact-title {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 2rem;
     font-weight: 300; /* Set the font weight to 300 (thin) */
 }
