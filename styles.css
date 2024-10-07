@@ -319,7 +319,7 @@ body {
 .contact-container {
     max-width: 600px;
     margin: 100px auto 0 auto;
-    padding: 5xp 40xp 20px 40xp;
+    padding: 50xp;
     text-align: center;
     background-color: #e0e0e0;
 }
@@ -330,7 +330,7 @@ body {
 }
 
 .contact-title {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 2rem;
     font-weight: 300; /* Set the font weight to 300 (thin) */
 }
