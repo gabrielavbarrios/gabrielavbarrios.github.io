@@ -427,16 +427,16 @@ textarea {
 .video-container {
     background-color: #e0e0e0;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px; /* Limit the maximum width */
-    margin: 100px auto 1rem; /* Center horizontally and add top margin for header */
+    margin: 100px auto 2rem; /* Center horizontally and add top margin for header */
     width: 90%; /* Take up 90% of the parent container's width */
 }
 
 .video-container h2 {
     margin-top: 0;
-    margin-bottom: 1rem; /* Add some space below the title */
+    margin-bottom: 2rem; /* Add some space below the title */
     color: #333;
     text-align: center;
 }
@@ -454,7 +454,7 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 
 .comp-card-container {
