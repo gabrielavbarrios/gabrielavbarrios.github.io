@@ -67,12 +67,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .additional-images img {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1800px; 
     height: auto;
     object-fit: contain; 
 }
