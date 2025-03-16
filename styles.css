@@ -92,6 +92,18 @@ nav ul li a {
 }
 
 @media screen and (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        justify-content: center; /* Centers the logo */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo-container img {
+        width: 120px; /* Adjust size for mobile */
+        height: auto;
+    }
+
     .image-fullscreen {
         height: auto; /* Ensures the height adapts */
         margin-bottom: 0; /* Removes any extra spacing */
