@@ -57,17 +57,16 @@ nav ul li a {
     font-weight: 300;
 }
 
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 /* FIX IMAGE POSITION BELOW HEADER */
 .image-fullscreen {
     margin-top: 0; /* Remove any negative margin */
     padding-top: 0;
     height: auto;
-}
-
-/* REMOVE EXTRA SPACE BELOW HEADER */
-main {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
 }
 
   .image-fullscreen {
