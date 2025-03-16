@@ -78,12 +78,19 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .image-fullscreen img,
-    .additional-images img {
+    .image-fullscreen {
+        height: auto; /* Adjusts height to fit content */
+    }
+
+    .image-fullscreen img {
+        display: block;
         width: 100%;
-        max-width: 900px;
         height: auto;
-        object-fit: contain;
+        object-fit: cover;
+    }
+
+    .additional-images {
+        margin-top: 0; /* Removes extra space above the additional images */
     }
 }
   
