@@ -79,7 +79,9 @@ body {
 
 @media screen and (max-width: 768px) {
     .image-fullscreen {
-        height: auto; /* Adjusts height to fit content */
+        height: auto; /* Ensures the height adapts */
+        margin-bottom: 0; /* Removes any extra spacing */
+        padding-bottom: 0; /* Ensures no padding adds space */
     }
 
     .image-fullscreen img {
@@ -90,7 +92,14 @@ body {
     }
 
     .additional-images {
-        margin-top: 0; /* Removes extra space above the additional images */
+        margin-top: 0 !important; /* Forces removal of extra space */
+        padding-top: 0 !important; /* Prevents any padding from affecting spacing */
+    }
+
+    .additional-images img {
+        display: block;
+        margin: 0; /* Ensures images align correctly */
+        padding: 0;
     }
 }
   
