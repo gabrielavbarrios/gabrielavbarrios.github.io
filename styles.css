@@ -34,18 +34,20 @@ header {
 }
 
 /* NAVIGATION MENU */
+/* NAVIGATION MENU - HORIZONTAL ALIGNMENT */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    align-items: center;
+    display: flex; /* Arrange items in a row */
+    flex-direction: row; /* Ensure horizontal layout */
+    justify-content: center; /* Center menu items */
+    gap: 15px; /* Add spacing between items */
     font-size: 0.85em; /* Keep text small */
 }
 
 nav ul li {
-    margin: 5px 0; /* Adjust spacing */
+    margin: 0; /* Remove extra spacing */
 }
 
 nav ul li a {
