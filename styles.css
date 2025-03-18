@@ -169,6 +169,21 @@ nav ul li a {
     text-align: center;
 }
 
+    #gallery h2 {
+        font-size: 1.5rem; /* Reduce title size on mobile */
+    }
+
+    #gallery nav ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center;
+    }
+
+    #gallery nav ul li a {
+        font-size: 1rem; /* Reduce font size for better fit */
+        padding: 8px 12px; /* Adjust padding */
+    }
+}
+
 .image-container {
     display: flex;
     justify-content: center;
