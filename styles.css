@@ -159,7 +159,7 @@ nav ul li a {
     background-color: #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
 }
 
 .resume-section h2 {
@@ -235,7 +235,7 @@ nav ul li a {
 
 .gallery-section {
     display: none;
-    margin: 100px auto; /* Add some top margin to account for header */
+    margin: 50px auto; /* Add some top margin to account for header */
     padding: 50px 20px;
     background-color: #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -431,7 +431,7 @@ body {
 
 .media-container {
     max-width: 600px;
-    margin: 50px auto 0 auto;
+    margin: 20px auto 0 auto;
     padding: 5px 40px 40px 40px;
     text-align: center;
     background-color: #E0E0E0;
