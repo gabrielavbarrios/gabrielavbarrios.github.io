@@ -436,7 +436,7 @@ body {
 .contact-links a {
     display: block;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300; /* Set the font weight to 300 (thin) */
     color: #464646;
     text-decoration: none;
@@ -449,7 +449,7 @@ body {
 /* Styling for the Social Media title */
 .social-media-title {
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300; /* Set the font weight to 300 (thin) */
 }
 
@@ -687,14 +687,14 @@ textarea {
 }
 
 .contact-title img {
-    width: 250px; /* Default size for desktop */
+    width: 300px; /* Default size for desktop */
     height: auto;
 }
 
 /* Responsive size for mobile */
 @media screen and (max-width: 768px) {
     .contact-title img {
-        width: 180px; /* Smaller size for mobile */
+        width: 220px; /* Smaller size for mobile */
     }
 }
 
@@ -706,14 +706,14 @@ textarea {
 }
 
 .resume-title img {
-    width: 250px; /* Default size for desktop */
+    width: 300px; /* Default size for desktop */
     height: auto;
 }
 
 /* Responsive size for mobile */
 @media screen and (max-width: 768px) {
     .resume-title img {
-        width: 180px; /* Smaller size for mobile */
+        width: 220px; /* Smaller size for mobile */
     }
 }
 
@@ -725,14 +725,14 @@ textarea {
 }
 
 .comp-card-title img {
-    width: 250px; /* Default size for desktop */
+    width: 300px; /* Default size for desktop */
     height: auto;
 }
 
 /* Responsive size for mobile */
 @media screen and (max-width: 768px) {
     .comp-card-title img {
-        width: 180px; /* Smaller size for mobile */
+        width: 220px; /* Smaller size for mobile */
     }
 }
 
@@ -744,14 +744,14 @@ textarea {
 }
 
 .image-gallery-title img {
-    width: 250px; /* Default size for desktop */
+    width: 300px; /* Default size for desktop */
     height: auto;
 }
 
 /* Responsive size for mobile */
 @media screen and (max-width: 768px) {
     .image-gallery-title img {
-        width: 180px; /* Smaller size for mobile */
+        width: 220px; /* Smaller size for mobile */
     }
 }
 .media-title {
@@ -762,13 +762,13 @@ textarea {
 }
 
 .media-title img {
-    width: 250px; /* Default size for desktop */
+    width: 300px; /* Default size for desktop */
     height: auto;
 }
 
 /* Responsive size for mobile */
 @media screen and (max-width: 768px) {
     .media-title img {
-        width: 180px; /* Smaller size for mobile */
+        width: 220px; /* Smaller size for mobile */
     }
 }
