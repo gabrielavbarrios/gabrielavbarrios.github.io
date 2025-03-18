@@ -412,7 +412,7 @@ body {
 
 .contact-container {
     max-width: 600px;
-    margin: 80px auto 0 auto;
+    margin: 20px auto 0 auto;
     padding: 5px 40px 40px 40px;
     text-align: center;
     background-color: #E0E0E0;
@@ -449,6 +449,7 @@ body {
 }
 
 .contact-links {
+    margin-bottom: 20px;
     margin-bottom: 20px;
 }
 
