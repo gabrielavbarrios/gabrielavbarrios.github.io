@@ -754,3 +754,21 @@ textarea {
         width: 180px; /* Smaller size for mobile */
     }
 }
+.media-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.media-title img {
+    width: 250px; /* Default size for desktop */
+    height: auto;
+}
+
+/* Responsive size for mobile */
+@media screen and (max-width: 768px) {
+    .media-title img {
+        width: 180px; /* Smaller size for mobile */
+    }
+}
