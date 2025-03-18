@@ -141,23 +141,23 @@
         }
 
         function createGallerySections() {
-            const mainHtml = siteConfig.galleryCategories.map(category => `
-                <section id="${category.id}" class="gallery-section">
-                    <h3>${category.name}</h3>
-                    <div class="gallery">
-                        ${(siteConfig.galleries[category.id] || []).map((img, index) => `
-                            <div class="gallery-item">
-                                <a href="javascript:void(0);" onclick="openOverlay(${index}, '${category.id}')">
-                                    <img src="${img.src}" alt="${img.alt}">
-                                </a>
-                                ${category.id === 'bts' ? `<p class="caption">${img.caption}</p>` : ''}
-                            </div>
-                        `).join('')}
+    const mainHtml = siteConfig.galleryCategories.map(category => `
+        <section id="${category.id}" class="gallery-section">
+            <div class="gallery">
+                ${(siteConfig.galleries[category.id] || []).map((img, index) => `
+                    <div class="gallery-item">
+                        <a href="javascript:void(0);" onclick="openOverlay(${index}, '${category.id}')">
+                            <img src="${img.src}" alt="${img.alt}">
+                        </a>
+                        ${category.id === 'bts' ? `<p class="caption">${img.caption}</p>` : ''}
                     </div>
-                </section>
-            `).join('');
-            document.getElementById('galleryMain').innerHTML = mainHtml;
-        }
+                `).join('')}
+            </div>
+        </section>
+    `).join('');
+    document.getElementById('galleryMain').innerHTML = mainHtml;
+}
+
 
         function showSection(sectionId, clickedElement) {
             document.querySelectorAll('.gallery-section').forEach(section => {
