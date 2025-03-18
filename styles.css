@@ -429,6 +429,25 @@ body {
     font-weight: 300; /* Set the font weight to 300 (thin) */
 }
 
+.media-container {
+    max-width: 600px;
+    margin: 50px auto 0 auto;
+    padding: 5px 40px 40px 40px;
+    text-align: center;
+    background-color: #E0E0E0;
+}
+
+/* Reduce the top margin for subsequent media-container elements */
+.media-container + .media-container {
+    margin-top: 20px; /* Reduced top margin between containers */
+}
+
+.media-title {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 300; /* Set the font weight to 300 (thin) */
+}
+
 .contact-links {
     margin-bottom: 20px;
 }
