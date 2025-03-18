@@ -235,7 +235,6 @@ nav ul li a {
 
 .gallery-section {
     display: none;
-    margin: 20px auto; /* Add some top margin to account for header */
     padding: 50px 20px;
     background-color: #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -243,6 +242,7 @@ nav ul li a {
 }
 
 .gallery-section h2 {
+    margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
     font-size: 2em;
@@ -449,7 +449,7 @@ body {
 }
 
 .contact-links {
-    margin-bottom: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
