@@ -1,70 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriela Barrios - Media</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabriela Barrios - Media</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      padding: 8px 12px;
+    }
+    nav ul li ul li a {
+      text-decoration: none;
+      color: inherit;
+    }
+    section {
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <div class="logo-container">
-        <img src="images/Logo_2.png" alt="Gabriela Barrios Logo">
+      <img src="images/Logo_2.png" alt="Gabriela Barrios Logo" />
     </div>
     <nav>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="comp_cards.html">comp cards</a></li>
-            <li><a href="media.html">media</a></li>
-            <li><a href="gallery.html">gallery</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="resume.html">resume</a></li>
+        <li><a href="comp_cards.html">comp cards</a></li>
+        <li>
+          <a href="media.html">media</a>
+          <ul>
+            <li><a href="#monologues">Monologues</a></li>
+            <li><a href="#acting-reels">Acting reels</a></li>
+            <li><a href="#commercials">Commercials, music videos, etc</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">gallery</a></li>
+      </ul>
     </nav>
-</header>
-    <main>
+  </header>
+
+  <main>
     <!-- Title Section -->
     <div class="media-title">
-        <img src="images/Media.png" alt="Media">
+      <img src="images/Media.png" alt="Media" />
     </div>
-</main>
-<div class="media-container">
-            <h2 class="media-title">MARRIAGE STORY Monologue</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LqN9m5PcsYk" title="MARRIAGE STORY Monologue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div> 
-        <div class="media-container">
-            <h2 class="media-title">FINDING NEMO Monologue</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/D0yAefff-Sk" title="FINDING NEMO Monologue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div> 
-        <div class="media-container">
-            <h2 class="media-title">BIRDMAN Monologue</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/80idlW_yzGY" title="BIRDMAN "Relevant" Monologue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+
+    <!-- Monologues Section -->
+    <section id="monologues">
+      <h1>Monologues</h1>
+
+      <div class="media-container">
+        <h2 class="media-title">MARRIAGE STORY Monologue</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LqN9m5PcsYk" title="MARRIAGE STORY Monologue" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="media-container">
-            <h2 class="media-title">Acting Reel</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ibUrB5cO-JA?si=0aC81u_7-lCsGg3k" title="Acting Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+      </div>
+
+      <div class="media-container">
+        <h2 class="media-title">FINDING NEMO Monologue</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/D0yAefff-Sk" title="FINDING NEMO Monologue" frameborder="0" allowfullscreen></iframe>
         </div>
-         <div class="media-container">
-            <h2 class="media-title">Chicago Sports Network TV Promo</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vxmMIvvP_ok?start=8" title="Chicago Sports Network TV Promo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+      </div>
+
+      <div class="media-container">
+        <h2 class="media-title">BIRDMAN Monologue</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/80idlW_yzGY" title="BIRDMAN Monologue" frameborder="0" allowfullscreen></iframe>
         </div>
-         <div class="media-container">
-            <h2 class="media-title">Tommy Hale's "Let's Not Fight It's Christmas" Music Video</h2>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SP3Zo4ldHEk" title="Tommy Hale's "Let's Not Fight It's Christmas" Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+      </div>
+    </section>
+
+    <!-- Acting Reels Section -->
+    <section id="acting-reels">
+      <h1>Acting Reels</h1>
+
+      <div class="media-container">
+        <h2 class="media-title">Acting Reel</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ibUrB5cO-JA?si=0aC81u_7-lCsGg3k" title="Acting Reel" frameborder="0" allowfullscreen></iframe>
         </div>
-         
-    </main>
+      </div>
+    </section>
+
+    <!-- Commercials Section -->
+    <section id="commercials">
+      <h1>Commercials, Music Videos, etc</h1>
+
+      <div class="media-container">
+        <h2 class="media-title">Chicago Sports Network TV Promo</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vxmMIvvP_ok?start=8" title="Chicago Sports Network TV Promo" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="media-container">
+        <h2 class="media-title">Tommy Hale's "Let's Not Fight It's Christmas" Music Video</h2>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SP3Zo4ldHEk" title="Tommy Hale's Music Video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
