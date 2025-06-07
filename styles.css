@@ -796,4 +796,48 @@ textarea {
     .media-title img {
         width: 220px; /* Smaller size for mobile */
     }
+
+<style>
+  /* Estilos ya existentes... */
+
+  .video-wrapper iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin-bottom: 20px;
+  }
+
+  .video-section {
+    margin-bottom: 40px;
+  }
+
+  .video-title {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  /* 👇 Agrega esto al final */
+  #gallery .video-wrapper {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #gallery .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  #gallery .video-title {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+</style>
+
 }
