@@ -3,18 +3,18 @@ body {
     font-family: Helvetica, sans-serif;
     color: #333;
     background-color: #f5f5f5;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-  
-  /* HEADER STYLES */
+    overflow-x: hidden;
+}
+
+/* HEADER STYLES */
 header {
-    background-color: rgba(255, 255, 255, 0.9); /* Keep it slightly transparent */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 15px 20px;
     display: flex;
-    flex-direction: column; /* Stack logo & menu vertically */
+    flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    position: relative; /* Remove absolute positioning */
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
@@ -30,29 +30,28 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px; /* Space between logo and menu */
+    margin-bottom: 10px;
 }
 
 .logo-container img {
-    width: 150px; /* Adjust size for a clean look */
+    width: 150px;
     height: auto;
 }
 
 /* NAVIGATION MENU */
-/* NAVIGATION MENU - HORIZONTAL ALIGNMENT */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Arrange items in a row */
-    flex-direction: row; /* Ensure horizontal layout */
-    justify-content: center; /* Center menu items */
-    gap: 15px; /* Add spacing between items */
-    font-size: 0.85em; /* Keep text small */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.85em;
 }
 
 nav ul li {
-    margin: 0; /* Remove extra spacing */
+    margin: 0;
 }
 
 nav ul li a {
@@ -62,24 +61,20 @@ nav ul li a {
     font-weight: 300;
 }
 
-/* FIX IMAGE POSITION BELOW HEADER */
+/* IMAGES */
 .image-fullscreen {
-    margin-top: 0; /* Remove any negative margin */
+    margin-top: 0;
     padding-top: 0;
-    height: auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-  .image-fullscreen {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-  }
-  
-  .image-fullscreen img {
+.image-fullscreen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
 .additional-images {
     display: flex;
@@ -91,69 +86,28 @@ nav ul li a {
 
 .additional-images img {
     width: 100%;
-    max-width: 1800px; 
+    max-width: 1800px;
     height: auto;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
-    main {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    .logo-container {
-        display: flex;
-        justify-content: center; /* Centers the logo */
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .logo-container img {
-        width: 120px; /* Adjust size for mobile */
-        height: auto;
-    }
-
-    .image-fullscreen {
-        height: auto; /* Ensures the height adapts */
-        margin-bottom: 0; /* Removes any extra spacing */
-        padding-bottom: 0; /* Ensures no padding adds space */
-    }
-
-    .image-fullscreen img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .additional-images {
-        margin-top: 0 !important; /* Forces removal of extra space */
-        padding-top: 0 !important; /* Prevents any padding from affecting spacing */
-    }
-
-    .additional-images img {
-        display: block;
-        margin: 0; /* Ensures images align correctly */
-        padding: 0;
-    }
-}
-  
-  .social-links {
+/* SOCIAL LINKS */
+.social-links {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
     gap: 15px;
-    z-index: 1001; /* Ensure it's on top of the image */
-  }
-  
-  .social-links a img {
+    z-index: 1001;
+}
+
+.social-links a img {
     width: 40px;
     height: 40px;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Add some shadow for better visibility */
-  }
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
 
+/* RESUME SECTION */
 .resume-section {
     padding: 20px 10px;
     background-color: #e0e0e0;
@@ -164,26 +118,17 @@ nav ul li a {
 
 .resume-section h2 {
     font-size: 2em;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     margin-bottom: 30px;
     text-align: center;
 }
 
-    #gallery h2 {
-        font-size: 1.5rem !important; /* Resize title on mobile */
-    }
-
-    #gallery nav ul {
-        flex-direction: row !important; /* Keep links in a row */
-        flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: center; /* Keep them centered */
-        gap: 10px; /* Add spacing between links */
-    }
-
-    #gallery nav ul li a {
-        font-size: 1rem !important; /* Resize text for better fit */
-        padding: 6px 10px !important; /* Adjust padding */
-    }
+/* COMP CARDS */
+.comp-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .image-container {
@@ -192,29 +137,34 @@ nav ul li a {
     align-items: center;
     gap: 0;
     margin: 20px auto;
-    max-height: 60vh; /* Set max height to 60% of viewport height */
-    overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
-    max-width: 100%; /* Allow container to take full width */
+    max-height: 60vh;
+    overflow-y: auto;
+    max-width: 100%;
     width: 100%;
 }
 
 .image-block {
-    flex: 0 1 auto; /* Allow flex items to shrink but not grow */
+    flex: 0 1 auto;
     max-width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%; /* Ensure full height of container */
+    height: 100%;
 }
 
 .image-block img {
-    max-height: calc(60vh - 60px); /* Subtract space for download button */
+    max-height: calc(60vh - 60px);
     width: 100%;
     object-fit: contain;
 }
 
-
-
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
 
 .download-button {
     display: inline-block;
@@ -225,20 +175,24 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     text-align: center;
+    max-width: 300px;
 }
 
 .download-button:hover {
     background-color: #525252;
 }
 
+/* GALLERY SECTION */
 .gallery-section {
     display: none;
     padding: 50px 20px;
     background-color: #e0e0e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .gallery-section h2 {
@@ -246,14 +200,22 @@ nav ul li a {
     margin-bottom: 30px;
     text-align: center;
     font-size: 2em;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
+    color: #333;
+}
+
+.gallery-section h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
     color: #333;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 .gallery img {
@@ -270,6 +232,7 @@ nav ul li a {
     filter: brightness(110%);
 }
 
+/* OVERLAY FOR GALLERY */
 .overlay {
     position: fixed;
     top: 0;
@@ -286,6 +249,7 @@ nav ul li a {
 .overlay img {
     max-width: 90%;
     max-height: 90%;
+    margin: 0 auto;
 }
 
 .overlay:target {
@@ -298,11 +262,10 @@ nav ul li a {
     right: 20px;
     color: white;
     font-size: 2rem;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     cursor: pointer;
 }
 
-/* Large Previous and Next Arrows */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -310,8 +273,8 @@ nav ul li a {
     width: auto;
     padding: 16px;
     color: white;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
-    font-size: 4rem; /* Larger size for visibility */
+    font-weight: 300;
+    font-size: 4rem;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
@@ -320,50 +283,35 @@ nav ul li a {
 }
 
 .prev {
-    left: 30px; /* Place it on the left side of the image */
+    left: 30px;
     transform: translateY(-50%);
 }
 
 .next {
-    right: 30px; /* Place it on the right side of the image */
+    right: 30px;
     transform: translateY(-50%);
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Hover effect for arrows */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Ensure that the overlay content is centered */
-.overlay img {
-    margin: 0 auto;
-}
-
-/* Center the Image Gallery Header */
-#gallery h2 {
-    text-align: center;
-    font-size: 2rem; /* Adjust the font size as needed */
-    font-weight: 300; /* Set the font weight to 300 (thin) */
-    margin-bottom: 20px; /* Add some spacing below the header */
-    color: #333; /* Match it with the existing color scheme */
-}
-
-/* Center the Image Gallery Header */
+/* GALLERY NAVIGATION */
 #gallery h2 {
     text-align: center;
     font-size: 2rem;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Style for the Gallery Navigation Links */
 #gallery nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center the navigation links */
-    gap: 20px; /* Add spacing between links */
+    justify-content: center;
+    gap: 20px;
 }
 
 #gallery nav ul li {
@@ -373,43 +321,19 @@ nav ul li a {
 #gallery nav ul li a {
     text-decoration: none;
     font-size: 1.1rem;
-    color: #2e2e2e; /* Make the links more distinct */
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    color: #2e2e2e;
+    font-weight: 300;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #gallery nav ul li a:hover {
-    background-color: #2e2e2e; /* Add a background color on hover */
-    color: #fff; /* Change text color on hover */
+    background-color: #2e2e2e;
+    color: #fff;
 }
 
-/* Make sure the main sections (Headshots, etc.) are also centered */
-.gallery-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.gallery-section h3 {
-    font-size: 1.5rem;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center; /* Center the grid items */
-}
-body {
-    background-color: #fff; /* White background */
-}
-
+/* CONTACT SECTION */
 .contact-container {
     max-width: 600px;
     margin: 20px auto 0 auto;
@@ -418,34 +342,24 @@ body {
     background-color: #E0E0E0;
 }
 
-/* Reduce the top margin for subsequent contact-container elements */
 .contact-container + .contact-container {
-    margin-top: 50px; /* Reduced top margin between containers */
+    margin-top: 50px;
 }
 
 .contact-title {
     margin-top: 20px;
     font-size: 2rem;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.media-container {
-    max-width: 600px;
-    margin: 20px auto 0 auto;
-    padding: 5px 40px 40px 40px;
-    text-align: center;
-    background-color: #E0E0E0;
-}
-
-/* Reduce the top margin for subsequent media-container elements */
-.media-container + .media-container {
-    margin-top: 20px; /* Reduced top margin between containers */
-}
-
-.media-title {
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+.contact-title img {
+    width: 300px;
+    height: auto;
 }
 
 .contact-links {
@@ -457,7 +371,7 @@ body {
     display: block;
     margin-bottom: 10px;
     font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     color: #464646;
     text-decoration: none;
 }
@@ -466,14 +380,13 @@ body {
     text-decoration: underline;
 }
 
-/* Styling for the Social Media title */
 .social-media-title {
     margin-top: 30px;
     font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
 }
 
-.contact-social-links { 
+.contact-social-links {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -485,22 +398,7 @@ body {
     height: 40px;
 }
 
-/* Home Page social links, positioned at bottom left */
-.social-links {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-}
-
-.social-links a {
-    margin-right: 10px;
-}
-
-.social-links img {
-    width: 40px;
-    height: 40px;
-}
-
+/* FORM STYLES */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
@@ -536,36 +434,65 @@ textarea {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 300; /* Set the font weight to 300 (thin) */
+    font-weight: 300;
     cursor: pointer;
 }
 
 .submit-button:hover {
     background-color: #353535;
 }
+
+/* MEDIA/VIDEO SECTION */
+.media-container {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    padding: 5px 40px 40px 40px;
+    text-align: center;
+    background-color: #E0E0E0;
+}
+
+.media-container + .media-container {
+    margin-top: 20px;
+}
+
+.media-title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.media-title img {
+    width: 300px;
+    height: auto;
+}
+
 .video-container {
     background-color: #e0e0e0;
     border-radius: 5px;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Limit the maximum width */
-    margin: 100px auto 2rem; /* Center horizontally and add top margin for header */
-    width: 90%; /* Take up 90% of the parent container's width */
+    max-width: 800px;
+    margin: 100px auto 2rem;
+    width: 90%;
 }
 
 .video-container h2 {
     margin-top: 0;
-    margin-bottom: 2rem; /* Add some space below the title */
+    margin-bottom: 2rem;
     color: #333;
     text-align: center;
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    max-width: 100%;
 }
 
 .video-wrapper iframe {
@@ -576,115 +503,94 @@ textarea {
     height: 100%;
 }
 
-.comp-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-bottom: 40px;
+/* MEDIA PAGE VIDEO FIXES */
+.gallery-section.video-gallery {
+    display: none;
+    padding: 50px 20px;
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.image-container {
+.gallery.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.video-section {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 0;
+}
+
+.video-title {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: #333;
+}
+
+#gallery .video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+#gallery .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* TITLE IMAGES */
+.resume-title {
     display: flex;
     justify-content: center;
-    gap: 0;
-    margin: 20px auto;
-    max-height: 60vh;
-    overflow-y: auto;
-    max-width: 100%;
-    width: 100%;
-}
-
-.image-block {
-    flex: 0 1 auto;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 100%;
-}
-
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-.download-button {
-    display: inline-block;
     margin-top: 20px;
-    padding: 8px 16px;
-    background-color: #2e2e2e;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 300;
-    width: auto;
-    max-width: 300px;
+    margin-bottom: 0px;
 }
 
-.download-button:hover {
-    background-color: #525252;
+.resume-title img {
+    width: 300px;
+    height: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .image-block {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
+.comp-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    header {
-      padding: 10px;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav {
-      width: 100%; /* Ensure nav takes full width */
-    }
-  
-    nav ul {
-      justify-content: flex-start; /* Align items to the start */
-      width: 100%; /* Ensure ul takes full width */
-    }
-  
-    .image-fullscreen img {
-      object-fit: cover;
-    }
-  
-    .social-links {
-      bottom: 10px;
-      left: 10px;
-    }
-    .image-fullscreen img {
-        height: auto;
-        width: 100%;
-    }
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .image-block {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-  }
-.contact-title {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
+.comp-card-title img {
+    width: 300px;
+    height: auto;
+}
+
+.image-gallery-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-gallery-title img {
+    width: 300px;
+    height: auto;
 }
 
 .gallery-item {
@@ -700,101 +606,126 @@ textarea {
     text-align: center;
 }
 
-.contact-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.contact-title img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-}
-
-/* Responsive size for mobile */
+/* MOBILE RESPONSIVE */
 @media screen and (max-width: 768px) {
-    .contact-title img {
-        width: 220px; /* Smaller size for mobile */
+    main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
-}
 
-.resume-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-.resume-title img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-}
-
-/* Responsive size for mobile */
-@media screen and (max-width: 768px) {
-    .resume-title img {
-        width: 220px; /* Smaller size for mobile */
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
 
-.comp-card-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.comp-card-title img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-}
-
-/* Responsive size for mobile */
-@media screen and (max-width: 768px) {
-    .comp-card-title img {
-        width: 220px; /* Smaller size for mobile */
+    nav {
+        width: 100%;
     }
-}
 
-.image-gallery-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.image-gallery-title img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-}
-
-/* Responsive size for mobile */
-@media screen and (max-width: 768px) {
-    .image-gallery-title img {
-        width: 220px; /* Smaller size for mobile */
+    nav ul {
+        justify-content: flex-start;
+        width: 100%;
     }
-}
-.media-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
-.media-title img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-}
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-/* Responsive size for mobile */
-@media screen and (max-width: 768px) {
+    .logo-container img {
+        width: 120px;
+        height: auto;
+    }
+
+    .image-fullscreen {
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .image-fullscreen img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .additional-images {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .additional-images img {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .social-links {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-block {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #gallery h2 {
+        font-size: 1.5rem !important;
+    }
+
+    #gallery nav ul {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #gallery nav ul li a {
+        font-size: 1rem !important;
+        padding: 6px 10px !important;
+    }
+
+    .contact-title img,
+    .resume-title img,
+    .comp-card-title img,
+    .image-gallery-title img,
     .media-title img {
-        width: 220px; /* Smaller size for mobile */
+        width: 220px;
     }
 
+    /* Media page videos mobile */
+    .gallery.video-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .video-section {
+        max-width: 100%;
+    }
+
+    .video-title {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-section.video-gallery {
+        padding: 30px 10px;
+    }
+
+    .gallery.video-grid {
+        gap: 20px;
+    }
 }
