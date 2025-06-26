@@ -253,9 +253,10 @@ nav ul li a {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gallery img {
@@ -270,6 +271,37 @@ nav ul li a {
 .gallery img:hover {
     transform: scale(1.05);
     filter: brightness(110%);
+}
+
+/* VIDEO SECTION STYLES */
+.video-section {
+    margin-bottom: 0;
+}
+
+.video-title {
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* OVERLAY FOR GALLERY */
@@ -527,22 +559,6 @@ textarea {
     text-align: center;
 }
 
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 /* MEDIA PAGE VIDEO FIXES */
 .gallery-section.video-gallery {
     display: none;
@@ -558,20 +574,6 @@ textarea {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     justify-items: center;
-}
-
-.video-section {
-    width: 100%;
-    max-width: 420px;
-    margin-bottom: 0;
-}
-
-.video-title {
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin: 0 0 15px 0;
-    text-align: center;
-    color: #333;
 }
 
 #gallery .video-wrapper {
@@ -634,6 +636,13 @@ textarea {
 }
 
 /* MOBILE RESPONSIVE */
+@media screen and (max-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     main {
         margin-top: 0 !important;
@@ -743,7 +752,7 @@ textarea {
     }
 
     /* Media page videos mobile */
-    .gallery.video-grid {
+    .gallery {
         grid-template-columns: 1fr;
         gap: 25px;
         padding: 0 10px;
@@ -755,6 +764,13 @@ textarea {
 
     .video-title {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
