@@ -275,7 +275,9 @@ nav ul li a {
 
 /* VIDEO SECTION STYLES */
 .video-section {
-    margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .video-title {
