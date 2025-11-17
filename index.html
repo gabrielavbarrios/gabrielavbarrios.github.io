@@ -27,7 +27,7 @@
             <img src="images/Indexpic.jpg" alt="Gabriela Barrios">
         </div>
         <div class="additional-images">
-            <img src="images/9.jpeg" alt="Bio">
+            <img id="slideshow" src="images/9.jpeg" alt="Bio">
         </div>
     </main>
     <div class="social-links">
@@ -38,5 +38,22 @@
             <img src="images/IMDb_Logo_Alt_Square_White.png" alt="IMDb">
         </a>
     </div>
+    <script>
+    // Add the images you want to rotate through:
+    const images = [
+        "images/9.jpeg",
+        "images/Sanctuary1.jpg",
+        "images/Basis_Technologies_Aug_2023.png",
+        "images/Sanctuary2.jpg"
+    ];
+
+    let index = 0;
+    const slideshow = document.getElementById("slideshow");
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        slideshow.src = images[index];
+    }, 3000); // change every 3 seconds
+</script>
 </body>
 </html>
