@@ -406,15 +406,6 @@ nav ul li a {
     color: #fff;
 }
 
-/* CONTACT SECTION */
-.contact-container {
-    max-width: 600px;
-    margin: 20px auto 0 auto;
-    padding: 5px 40px 40px 40px;
-    text-align: center;
-    background-color: #E0E0E0;
-}
-
 .contact-container {
     max-width: 600px;
     margin: 20px auto 0 auto;
@@ -448,10 +439,21 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-/* CHANGED: remove light font-weight so <strong> works */
+/* Links and lines spacing */
+.contact-links div,
+.contact-links a {
+    margin-bottom: 15px;  /* space between lines */
+}
+
+/* Remove extra space after last line */
+.contact-links div:last-child,
+.contact-links a:last-child {
+    margin-bottom: 0;
+}
+
+/* Remove light font-weight so <strong> works */
 .contact-links a {
     display: block;
-    margin-bottom: 10px;
     font-size: 16px;
     color: #464646;
     text-decoration: none;
@@ -459,24 +461,6 @@ nav ul li a {
 
 .contact-links a:hover {
     text-decoration: underline;
-}
-
-.social-media-title {
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.contact-social-links {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.contact-social-links img {
-    width: 40px;
-    height: 40px;
 }
 
 .social-media-title {
