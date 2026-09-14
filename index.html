@@ -25,9 +25,6 @@
         <div class="image-fullscreen">
             <img src="images/L1014432_(3)-3.jpg" alt="Gabriela Barrios">
         </div>
-        <div class="additional-images">
-            <img id="slideshow" src="images/9.jpeg" alt="Bio">
-        </div>
     </main>
     <div class="social-links">
         <a href="https://www.instagram.com/gabrielavbarrios/" target="_blank">
@@ -37,21 +34,5 @@
             <img src="images/IMDb_Logo_Alt_Square_White.png" alt="IMDb">
         </a>
     </div>
-    <script>
-    // Add the images you want to rotate through:
-    const images = [
-        "images/Gabriela_Barrios_Stephanie.jpeg",
-        "images/Climate_Power.png",
-        "images/Basis_Technologies_Aug_2023.png",
-    ];
-
-    let index = 0;
-    const slideshow = document.getElementById("slideshow");
-
-    setInterval(() => {
-        index = (index + 1) % images.length;
-        slideshow.src = images[index];
-    }, 2000); // change every 2 seconds
-</script>
 </body>
 </html>
