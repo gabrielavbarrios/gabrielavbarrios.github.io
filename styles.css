@@ -331,6 +331,7 @@ nav ul li a {
 }
 
 .video-title {
+    display: none;
     font-weight: bold;
     margin: 0 0 15px 0;
     text-align: center;
