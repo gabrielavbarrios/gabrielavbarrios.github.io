@@ -894,7 +894,7 @@ body.index-page .image-fullscreen {
     padding: 0;
 }
 
-body.index-page .image-fullscreen img {
+body.index-page .image-fullscreen > img {
     display: block;
     width: 100%;
     height: 100%;
@@ -902,8 +902,25 @@ body.index-page .image-fullscreen img {
     object-position: center center;
 }
 
+body.index-page .image-fullscreen {
+    position: relative;
+}
+
 body.index-page .social-links {
-    position: fixed;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+}
+
+@media screen and (max-width: 768px) {
+    body.index-page .social-links {
+        top: 10px;
+        right: 10px;
+        bottom: auto;
+        left: auto;
+    }
 }
 
 /* MEDIA PAGE: center the videos (overrides the collage layout for video galleries) */
@@ -923,12 +940,6 @@ body.index-page .social-links {
     padding: 0;
 }
 
-#galleryMain .gallery.video-grid > *,
-#galleryMain .gallery:has(.video-wrapper) > * {
-    width: 100%;
-    margin: 0 auto;
-    line-height: normal;
-}
 #galleryMain .gallery.video-grid > *,
 #galleryMain .gallery:has(.video-wrapper) > * {
     width: 100%;
