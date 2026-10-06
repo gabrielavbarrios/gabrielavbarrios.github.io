@@ -943,3 +943,10 @@ body.index-page header .social-links {
     margin: 0 auto;
     line-height: normal;
 }
+
+/* RESUME PAGE: Actors Access link, centered above the resume/headshot */
+.actorsaccess-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
