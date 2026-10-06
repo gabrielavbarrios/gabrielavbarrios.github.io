@@ -909,7 +909,7 @@ body.index-page .image-fullscreen {
 
 body.index-page .social-links {
     position: absolute;
-    top: 28%;
+    top: 40%;
     left: 86%;
     right: auto;
     bottom: auto;
@@ -924,6 +924,10 @@ body.index-page .social-links {
         left: auto;
         transform: none;
     }
+
+    body.index-page .social-links a img {
+    width: 60px;
+    height: 60px;
 }
 
 /* MEDIA PAGE: center the videos (overrides the collage layout for video galleries) */
