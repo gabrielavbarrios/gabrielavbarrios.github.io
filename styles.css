@@ -909,10 +909,11 @@ body.index-page .image-fullscreen {
 
 body.index-page .social-links {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 28%;
+    left: 86%;
+    right: auto;
     bottom: auto;
-    left: auto;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 768px) {
@@ -921,6 +922,7 @@ body.index-page .social-links {
         right: 10px;
         bottom: auto;
         left: auto;
+        transform: none;
     }
 }
 
