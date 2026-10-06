@@ -869,3 +869,63 @@ textarea {
         column-count: 1;
     }
 }
+
+/* INDEX PAGE: static full-screen picture, no scrolling (index page only) */
+body.index-page {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body.index-page header {
+    flex: 0 0 auto;
+}
+
+body.index-page main {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+body.index-page .image-fullscreen {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.index-page .image-fullscreen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+body.index-page .social-links {
+    position: fixed;
+}
+
+/* MEDIA PAGE: center the videos (overrides the collage layout for video galleries) */
+#galleryMain .gallery-section.video-gallery,
+#galleryMain .gallery-section:has(.video-wrapper) {
+    padding: 50px 20px;
+}
+
+#galleryMain .gallery.video-grid,
+#galleryMain .gallery:has(.video-wrapper) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-count: auto;
+    gap: 40px;
+    padding: 0;
+}
+
+#galleryMain .gallery.video-grid > *,
+#galleryMain .gallery:has(.video-wrapper) > * {
+    width: 100%;
+    margin: 0 auto;
+    line-height: normal;
+}
