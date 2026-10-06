@@ -903,34 +903,24 @@ body.index-page .image-fullscreen > img {
     object-position: center center;
 }
 
-body.index-page .image-fullscreen {
-    position: relative;
-}
-
-body.index-page .social-links {
+body.index-page header .social-links {
     position: absolute;
-    top: 40%;
-    left: 86%;
-    right: auto;
+    top: 50%;
+    right: 20px;
+    left: auto;
     bottom: auto;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 @media screen and (max-width: 768px) {
-    body.index-page .social-links {
+    body.index-page header .social-links {
         top: 10px;
         right: 10px;
-        bottom: auto;
-        left: auto;
         transform: none;
     }
-
-    body.index-page .social-links a img {
-    width: 90px;
-    height: 90px;
 }
 
-/* MEDIA PAGE: center the videos (overrides the collage layout for video galleries) */
+/* MEDIA PAGE: centered, medium-sized video */
 #galleryMain .gallery-section.video-gallery,
 #galleryMain .gallery-section:has(.video-wrapper) {
     padding: 50px 20px;
@@ -947,10 +937,9 @@ body.index-page .social-links {
     padding: 0;
 }
 
-#galleryMain .gallery.video-grid > *,
-#galleryMain .gallery:has(.video-wrapper) > * {
+#galleryMain .video-section {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     line-height: normal;
 }
