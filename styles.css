@@ -929,3 +929,10 @@ body.index-page .social-links {
     margin: 0 auto;
     line-height: normal;
 }
+#galleryMain .gallery.video-grid > *,
+#galleryMain .gallery:has(.video-wrapper) > * {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: normal;
+}
